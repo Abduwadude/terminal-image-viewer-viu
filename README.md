@@ -1,5 +1,7 @@
 # terminal-image-viewer-viu
 
+[![shellcheck](https://github.com/Abduwadude/terminal-image-viewer-viu/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/Abduwadude/terminal-image-viewer-viu/actions/workflows/shellcheck.yml)
+
 A Claude Code skill that lets the agent show you screenshots in a terminal window, at full resolution, while you keep working.
 
 ## The problem it solves
@@ -53,6 +55,10 @@ Set `VIU=/path/to/viu` if viu is not on your `PATH` or in `~/.cargo/bin`.
 - tmux before 3.3 cannot pass kitty images through, so viu inside tmux shows half-blocks. Use kitty splits (what the grid does).
 - On some Ubuntu setups `/usr/bin/gnome-terminal` fails when launched from an agent's shell (`gi` import error); `/usr/bin/gnome-terminal.real` works. This only matters for the no-kitty fallback.
 - The agent can confirm the preview process is running, not that you looked at it. The skill tells it not to claim otherwise.
+
+## Contributing
+
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to test a change, and look for issues labelled `good first issue` to get started.
 
 ## License
 

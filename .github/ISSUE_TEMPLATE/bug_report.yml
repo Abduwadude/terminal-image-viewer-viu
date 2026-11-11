@@ -1,0 +1,47 @@
+name: Bug report
+description: Something doesn't show, looks wrong, or the agent misuses the skill
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead. A screenshot of the terminal helps.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. kitty --title "Screenshot preview" --detach scripts/viu-watch.sh ~/shots
+        2. Save a new .png into ~/shots
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and version
+      placeholder: Ubuntu 22.04 / macOS 15 / Fedora 41
+    validations:
+      required: true
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal and version
+      placeholder: "kitty 0.21.2 (kitty --version)"
+    validations:
+      required: true
+  - type: input
+    id: viu
+    attributes:
+      label: viu version
+      placeholder: "viu 1.6.1 (viu --version)"
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent, if relevant
+      placeholder: Claude Code 2.x

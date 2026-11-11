@@ -9,7 +9,9 @@ command -v kitty >/dev/null || { echo "kitty not found; the grid needs kitty" >&
 
 if [ "${1:-}" = "-n" ]; then
   [ $# -eq 3 ] || { echo "usage: viu-grid.sh -n N DIR" >&2; exit 2; }
-  mapfile -t files < <(ls -t "$3"/*.png 2>/dev/null | head -"$2")
+  files=()
+  # while-read instead of mapfile: macOS ships bash 3.2, which has no mapfile
+  while IFS= read -r f; do files+=("$f"); done < <(ls -t "$3"/*.png 2>/dev/null | head -"$2")
 else
   files=("$@")
 fi

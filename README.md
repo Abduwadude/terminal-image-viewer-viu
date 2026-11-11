@@ -23,7 +23,7 @@ kitty matters. viu uses kitty's graphics protocol and shows the actual image. In
 ## Install
 
 ```bash
-git clone <this repo> ~/.claude/skills/terminal-image-viewer-viu
+git clone https://github.com/Abduwadude/terminal-image-viewer-viu.git ~/.claude/skills/terminal-image-viewer-viu
 chmod +x ~/.claude/skills/terminal-image-viewer-viu/scripts/*.sh
 ```
 
